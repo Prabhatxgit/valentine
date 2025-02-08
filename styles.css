@@ -1,0 +1,128 @@
+/* Base body styles */
+body {
+  font-family: "romantic", cursive; /* Change this to your preferred romantic font */
+  background-color: #ffdde1; /* Light pink background color */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  margin: 0;
+  background: url("background.jpg") repeat; /* Change background.jpg to your image */
+  font-size: 35px;
+  color: rgb(21, 1, 15);
+}
+
+/* Header text stroke effect */
+.hh {
+  -webkit-text-stroke: 2px #ac1536; /* Adjust stroke width and color here */
+  font-weight: 900;
+}
+
+/* Paragraph text stroke and styling */
+.pp {
+  -webkit-text-stroke: 2px #71004f; /* Adjust stroke width and color here */
+  font-size: 50px; /* Adjust text size */
+  font-style: oblique;
+  font-weight: 800;
+}
+
+/* Main container styling */
+body .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adjust shadow intensity */
+}
+
+/* Image dimensions */
+.image {
+  height: 280px; /* Adjust image height */
+}
+
+/* Button base styles */
+.buttons button {
+  background-color: #ff4d79; /* Button background color */
+  color: #fff;
+  padding: 10px 30px; /* Adjust padding for button size */
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 26px;
+  cursor: pointer;
+  position: relative;
+  font-family: "serif", cursive;
+}
+
+/* Button hover effect */
+.buttons button:hover {
+  background-color: #7c1f37; /* Darker shade for hover */
+}
+
+/* Button container */
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+/* No button specific styles */
+#no-button {
+  cursor: pointer;
+}
+
+/* Hidden message styling */
+.hidden-message {
+  display: none;
+  margin-top: 20px;
+}
+
+/* Animation class */
+.move {
+  animation: moveNoMessage 0.5s linear;
+}
+
+/* Animation keyframes */
+@keyframes moveNoMessage {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(30px, 30px); }
+  50% { transform: translate(-20px, -20px); }
+  75% { transform: translate(10px, 10px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* New styles for the Yes button positioning and gift wrap effect */
+#yes-button {
+  position: relative;
+  bottom: -50px; /* Adjust this value to move button down */
+  padding: 15px 50px; /* Makes the button more elongated */
+  background: linear-gradient(45deg, #ff4d79, #ff8da1); /* Gradient background */
+  border: 2px solid #ff1f1f; /* Gift wrap border */
+  box-shadow: 0 0 10px rgba(255, 77, 121, 0.5); /* Soft glow effect */
+  /* Ribbon effect */
+  &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 20px;
+      background: #ff1f1f;
+      border-radius: 50%;
+  }
+  &::after {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 2px;
+      background: #ff1f1f;
+  }
+}
